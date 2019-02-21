@@ -1,5 +1,5 @@
 # logstash-aws
-The `Dockerfile` on this folder creates an image to create and automate Logstash tasks to automate MySQL indexing into
+The `Dockerfile` on this folder creates an image to create and automate Logstash tasks to run MySQL indexing into
 AWS ElasticSearch. Intended to be ran as a command and scheduled by using some sort of cron, it will naturally die
 after completion. Don't expect the container to stay up and running.
 
