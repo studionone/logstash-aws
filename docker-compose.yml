@@ -6,17 +6,12 @@ networks:
     name: localdev
 
 services:
-  web:
+  logstash:
     build:
       context: .
-      args:
-        env: prod
     container_name: logstash-aws
     networks:
       - logstash
     restart: on-failure
-    volumes:
-      - ./conf/es.conf:/opt/es.conf
-      - ./conf/mysql-connector-java-8.0.13.jar:/opt/mysql-connector-java-8.0.13.jar
     env_file:
-      - ./conf/prod/prod.env
+      - ./conf/.env
